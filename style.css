@@ -1,0 +1,224 @@
+/**
+Theme Name: Lightspeed Theme
+Author: Brzina
+**/
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/raleway/Raleway-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/raleway/Raleway-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+html,body {
+    height: 100%;
+    margin: 0;
+}
+
+/* header */
+
+.main-header {
+    background-color: #fff;
+    width: 100%;
+    height: 100px;
+}
+@media (max-width: 767px) {
+    .main-header {
+        height: 150px;
+    }
+}
+
+.main-header .top-bar {
+    margin: 0;
+    padding: 0;
+}
+
+.main-header .top-bar ul {
+    list-style-type: none;
+}
+
+@media (min-width: 767px) {
+    .main-header .top-bar ul {
+        display: flex;
+    }
+}
+
+.main-header .top-bar li a {
+    padding: 20px 10px;
+    color: black;
+    text-decoration: none;
+
+}
+
+.main-header .top-bar li a:hover {
+    text-decoration: underline;
+}
+
+.main-header .top-bar li:first-child a {
+    padding-left: 0;
+}
+
+.main-header .top-bar li:last-child a {
+    padding-right: 0;
+}
+
+.main-header > .container {
+    height: 100%;
+}
+
+.menu-top-bar-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 100%;
+}
+
+.account.col-12 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.account.col-12 .nav-link.my-account {
+    padding-right: 1rem;
+}
+
+/* header ends */
+
+
+
+.page-wrap {
+    height: inherit;
+    padding: 10px 0;
+}
+
+.page-wrap > .container > div > .elementor-element {
+    padding: 0;
+}
+
+.paragraph {
+    background-color: green;
+    font-size: 15px;
+}
+
+
+
+/* footer */
+
+footer {
+    background-color: rgba(25,25,25,0.5);
+    width: 100%;
+    height: 100px;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+footer li a {
+    padding: 20px 10px;
+    color: black;
+    text-decoration: none;
+
+}
+
+footer li a:hover {
+    text-decoration: underline;
+}
+
+footer li:first-child a {
+    padding-left: 0;
+}
+
+footer li:last-child a {
+    padding-right: 0;
+}
+
+footer > .container {
+    height: 100%;
+}
+
+.menu-footer-bar-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 100%;
+}
+
+/* Footer Ends */
+
+
+/* Search Form */
+.search-form button {
+    background-image: url('img/search.png');
+    height: 23px;
+    width: 23px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+}
+
+.search-form input[type="search"] {
+    background-color: #fff;
+    border: none;
+    font-weight: 500;
+    font-size: 110%;
+    padding: 0.3rem 1rem;
+    margin-right: 0.3rem;
+}
+
+/* Cart */
+.cart .cart-icon {
+    background-image: url('img/cart.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.cart .items {
+    background: red;
+    color: #FFF;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+
+/* WooCommerce */
+
+/* Price div */
+.price-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+@media (max-width: 767px) {
+    .woocommerce ul.products li.product .button {
+        width: 100%;
+        text-align: center;
+    }
+}
