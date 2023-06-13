@@ -222,3 +222,34 @@ footer > .container {
         text-align: center;
     }
 }
+
+
+/* Cart */
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.minus-btn,
+.plus-btn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.minus-btn:hover,
+.plus-btn:hover {
+    background-color: #ccc;
+}
+
