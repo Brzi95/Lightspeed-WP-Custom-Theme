@@ -1,38 +1,35 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function() {
 
-    jQuery('li.product a img').on('click', function(event) {
-        event.preventDefault(); 
-        const productId = jQuery(this).closest('div.main-parent').data('product_id');
-        const productTitle = jQuery(this).closest('div.main-parent').data('product_title');
-        const productPopup = jQuery(this).closest('div.main-parent').find('.quick-view-product-popup');
-
-        console.log(productId, productTitle);
-        productPopup.addClass("open-popup");
-          
+    // Search bar appearing on click
+    jQuery("a.search-icon").on('click', function(){
+        jQuery(".search-div").toggleClass("hidden");
     });
 
-    jQuery('.close-popup-btn').off().on('click', function() {
-        const productPopup = jQuery(this).closest('div.main-parent').find('.quick-view-product-popup');
-
-        console.log('close popup');
-        productPopup.removeClass("open-popup");
+    jQuery(document).on("click", function(e) {
+        if ((jQuery(e.target).is(".search-form") === false) && (jQuery(e.target).is("[type='search']") === false)) {
+          jQuery(".search-div").addClass("hidden");
+        }
     });
 
-    jQuery('.close-popup-btn').off().on('click', function() {
-        const productPopup = jQuery(this).closest('div.main-parent').find('.quick-view-product-popup');
-
-        console.log('close popup');
-        productPopup.removeClass("open-popup");
+    // Sidebar appearing on click on archive page
+    jQuery('.toggle-sidebar').on('click', function() {
+        jQuery('.sidebar-overlay').toggleClass('show-overlay');
+        jQuery('.sidebar-container').toggleClass('show-sidebar');
+        jQuery('body').toggleClass('disable-y-scroll');
     });
 
-    jQuery('.quick-view-product-popup').click(function() {
-        console.log('close popup');
-        jQuery('.open-popup').removeClass("open-popup");
+    jQuery('.sidebar-container').on('click', function() {
+        jQuery('.sidebar-overlay').removeClass('show-overlay');
+        jQuery('.sidebar-container').toggleClass('show-sidebar');
+        jQuery('body').removeClass('disable-y-scroll');
     });
 
-    // Prevent events from getting pass .popup-container
-    jQuery('.popup-container').click(function(e){
+    jQuery('.sidebar-content').click(function(e){
         e.stopPropagation();
     });
 
 });
+
+
+
+

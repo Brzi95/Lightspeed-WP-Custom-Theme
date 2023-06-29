@@ -2,11 +2,11 @@
 /**
  * The template for the sidebar containing the shop widget area
  * 
- * @package Lightspeed Theme 
+ * @package Officebite Theme 
  */
 
 ?>
 
-<?php if(is_active_sidebar('lightspeed-sidebar-shop')): ?>
-    <?php dynamic_sidebar('lightspeed-sidebar-shop'); ?>
+<?php if(is_active_sidebar('officebite-sidebar-shop')): ?>
+    <?php dynamic_sidebar('officebite-sidebar-shop'); ?>
 <?php endif; ?>

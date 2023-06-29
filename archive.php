@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy
  * 
- * @package Lightspeed Theme
+ * @package Officebite Theme
  */
 
 get_header(); 
@@ -22,12 +22,12 @@ get_header();
                                     get_template_part('template-parts/content', 'archive');
                                 endwhile;
                                 the_posts_pagination(array(
-                                    'prev_text'     => esc_html__('Previous', 'lightspeed'),
-                                    'next_text'     => esc_html__('Next', 'lightspeed'),
+                                    'prev_text'     => esc_html__('Previous', 'officebite'),
+                                    'next_text'     => esc_html__('Next', 'officebite'),
                                 ));
                             else:
                             ?>
-                            <p> <?php esc_html_e('Nothing to display', 'lightspeed') ?> </p>
+                            <p> <?php esc_html_e('Nothing to display', 'officebite') ?> </p>
                             <?php endif; ?>
                         </div>
                         <?php get_sidebar(); ?>

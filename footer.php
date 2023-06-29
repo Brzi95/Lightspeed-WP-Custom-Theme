@@ -1,43 +1,25 @@
-<footer class="footer-bar">
-    <section class="footer-widgets">
-        <div class="container">
-            <div class="row">
-                <?php if(is_active_sidebar('lightspeed-sidebar-footer-1')): ?>
-                    <div class="col-md-4 col-12">
-                        <?php dynamic_sidebar('lightspeed-sidebar-footer-1'); ?>
-                    </div>
-                <?php endif; ?>
-                <?php if(is_active_sidebar('lightspeed-sidebar-footer-2')): ?>
-                    <div class="col-md-4 col-12">
-                        <?php dynamic_sidebar('lightspeed-sidebar-footer-2'); ?>
-                    </div>
-                <?php endif; ?>
-                <?php if(is_active_sidebar('lightspeed-sidebar-footer-3')): ?>
-                    <div class="col-md-4 col-12">
-                        <?php dynamic_sidebar('lightspeed-sidebar-footer-3'); ?>
-                    </div>
-                <?php endif; ?>
-            </div>
+<footer class="footer-bar flex-row justify-center">
+    <div class="max-width-container">
+        <div class="logo-footer flex-column justify-center">
+            <?php if(has_custom_logo()): ?>
+                <?php the_custom_logo(); ?>
+            <?php else: ?>
+                <?php get_bloginfo() ?>
+                <span><?php bloginfo('description'); ?></span>
+            <?php endif; ?>
         </div>
-    </section>
-    <seciton class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="copyright-text col-12 col-md-6">
-                    <p><?php echo esc_html(get_theme_mod('set_copyright', __('All Rights Reserved', 'lightspeed'))); ?></p>
-                </div>
-                <nav class="footer-menu col-12 col-md-6 text-left text-md-right">
-                    <?php 
-                        // wp_nav_menu(
-                        //     array(
-                        //         'theme_location' => 'lightspeed_footer_menu'
-                        //     )
-                        // );
-                    ?>
-                </nav>
-            </div>
+        <div class="social-icons flex-row justify-end align-center">
+            <a class="footer-icons" target="_blank" href="https://www.facebook.com/OfficeBite">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/icons/facebook.png'); ?>" alt="facebook">
+            </a>
+            <a class="footer-icons" target="_blank" href="https://www.linkedin.com/company/officebite"> 
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/icons/linkedin.png'); ?>" alt="linkedin">
+            </a>
+            <a class="footer-icons" target="_blank" href="https://www.instagram.com/office_bite/">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/icons/instagram.png'); ?>" alt="instagram">
+            </a>
         </div>
-    </seciton>
+    </div>
 </footer>
     <?php wp_footer(); ?>
 </body>
