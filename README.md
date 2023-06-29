@@ -2,4 +2,4 @@
 Byteout Software WordPress Theme
 
 https://lightspeed-solutions.com/
-http://officebite.io/
+https://officebite.io/
