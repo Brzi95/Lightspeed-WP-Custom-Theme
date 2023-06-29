@@ -1,4 +1,5 @@
-# Lightspeed-WP-Custom-Theme
-Byteout WordPress Theme
+# OfficeBite-Custom-WordPress-Theme
+Byteout Software WordPress Theme
 
 https://lightspeed-solutions.com/
+http://officebite.io/
